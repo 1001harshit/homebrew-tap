@@ -5,13 +5,13 @@
 class Emberkv < Formula
   desc "Redis-compatible database with time travel and branches, on an LSM tree"
   homepage "https://github.com/1001harshit/emberkv"
-  version "0.2.0"
+  version "0.3.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/1001harshit/emberkv/releases/download/v0.2.0/emberkv_darwin_amd64.tar.gz"
-      sha256 "fd292071ea194df808f0fdc48bf4e0e75bd23e9be9a45e4a6cf06d23ef340afd"
+      url "https://github.com/1001harshit/emberkv/releases/download/v0.3.0/emberkv_darwin_amd64.tar.gz"
+      sha256 "85b724c6b91825e27d47462419eb93072ab28802ddf0e3704f0a2bc5a7036702"
 
       define_method(:install) do
         bin.install "emberkv"
@@ -19,8 +19,8 @@ class Emberkv < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/1001harshit/emberkv/releases/download/v0.2.0/emberkv_darwin_arm64.tar.gz"
-      sha256 "e9e5a3ed44e890011fa4b5f636a3546abcffde53b3d85333bfcde2ea913d4844"
+      url "https://github.com/1001harshit/emberkv/releases/download/v0.3.0/emberkv_darwin_arm64.tar.gz"
+      sha256 "eea4d713adf8f4ecf5bfbd0c37432c89ee3d6c9d9dc4dd8e6ad115c7a7b0bd5f"
 
       define_method(:install) do
         bin.install "emberkv"
@@ -31,16 +31,16 @@ class Emberkv < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/1001harshit/emberkv/releases/download/v0.2.0/emberkv_linux_amd64.tar.gz"
-      sha256 "546627e2c883c22a54dc2a5652c1d0cb8cb5e13ba1869ab2df086d86b382ff05"
+      url "https://github.com/1001harshit/emberkv/releases/download/v0.3.0/emberkv_linux_amd64.tar.gz"
+      sha256 "69efedc564f4470867f71f1eb0a8f73b7dcd16180bb1e0683bd19e78c1ff5960"
       define_method(:install) do
         bin.install "emberkv"
         bin.install "emberbench"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/1001harshit/emberkv/releases/download/v0.2.0/emberkv_linux_arm64.tar.gz"
-      sha256 "1c337f343a3bca8226ad3f71d48e9f7c6ecf4605ba686b860601b4a22a816fc3"
+      url "https://github.com/1001harshit/emberkv/releases/download/v0.3.0/emberkv_linux_arm64.tar.gz"
+      sha256 "1435d63454c10c841a0e0cfba2bc49e2f0ea5c7465a43999a49a8bf060375b04"
       define_method(:install) do
         bin.install "emberkv"
         bin.install "emberbench"
